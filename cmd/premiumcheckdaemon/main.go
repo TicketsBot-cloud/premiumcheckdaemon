@@ -14,6 +14,8 @@ import (
 	"github.com/go-redis/redis/v8"
 	"github.com/jackc/pgx/v4"
 	"github.com/jackc/pgx/v4/pgxpool"
+
+	_ "github.com/joho/godotenv/autoload" // Load environment variables from .env file
 )
 
 var dryRun = flag.Bool("dryrun", false, "If set, no changes will be made")

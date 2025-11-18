@@ -5,13 +5,14 @@ go 1.24.0
 require (
 	github.com/TicketsBot-cloud/common v0.0.0-20251026182733-99fa0dc31d90
 	github.com/TicketsBot-cloud/database v0.0.0-20251115092952-706aaa38b688
+	github.com/TicketsBot-cloud/gdl v0.0.0-20251114175831-d4fde7035386
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/jackc/pgx/v4 v4.18.3
+	github.com/joho/godotenv v1.5.1
 	github.com/rxdn/gdl v0.0.0-20240612163900-621eccf40179
 )
 
 require (
-	github.com/TicketsBot-cloud/gdl v0.0.0-20250509054940-2045fbe19c06 // indirect
 	github.com/TicketsBot/ttlcache v1.6.1-0.20200405150101-acc18e37b261 // indirect
 	github.com/boltdb/bolt v1.3.1 // indirect
 	github.com/cespare/xxhash/v2 v2.1.2 // indirect

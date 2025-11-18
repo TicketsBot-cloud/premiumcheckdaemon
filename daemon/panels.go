@@ -42,6 +42,8 @@ func (d *Daemon) sweepPanels(ctx context.Context) {
 		if err != nil {
 			if errors.Is(err, cache.ErrNotFound) {
 				continue // if bot's been kicked doesn't matter, when we rejoin we'll purge
+			} else {
+				sentry.Error(err)
 			}
 		}
 
