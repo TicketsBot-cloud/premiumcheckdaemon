@@ -2,10 +2,11 @@ package daemon
 
 import (
 	"context"
-	"github.com/TicketsBot/common/model"
-	"github.com/TicketsBot/common/premium"
-	"github.com/TicketsBot/common/sentry"
-	"github.com/TicketsBot/common/whitelabeldelete"
+
+	"github.com/TicketsBot-cloud/common/model"
+	"github.com/TicketsBot-cloud/common/premium"
+	"github.com/TicketsBot-cloud/common/sentry"
+	"github.com/TicketsBot-cloud/common/whitelabeldelete"
 )
 
 func (d *Daemon) sweepWhitelabel(ctx context.Context) {
