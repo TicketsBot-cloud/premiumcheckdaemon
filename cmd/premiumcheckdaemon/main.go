@@ -23,8 +23,11 @@ func main() {
 	fmt.Printf("Dry-run: %v\n", *dryRun)
 
 	if err := sentry.Initialise(sentry.Options{
-		Dsn:   os.Getenv("SENTRY_DSN"),
-		Debug: true,
+		Dsn:              os.Getenv("SENTRY_DSN"),
+		Debug:            true,
+		EnableTracing:    true,
+		TracesSampleRate: 1.0,
+		SampleRate:       1.0,
 	}); err != nil {
 		fmt.Println(err.Error())
 	}

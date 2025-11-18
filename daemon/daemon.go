@@ -53,9 +53,15 @@ func NewDaemon(db *database.Database, cache *cache.PgCache, redis *redis.Client,
 }
 
 func (d *Daemon) Start() {
+	daemonDelay := os.Getenv("DAEMON_DELAY")
+	delayDuration, err := time.ParseDuration(daemonDelay)
+	if err != nil {
+		delayDuration = time.Second * 10
+	}
+	d.Logger.Printf("Daemon starting with delay %s", delayDuration.String())
 	for {
 		select {
-		case <-time.After(time.Minute * 10): // TODO: Don't hardcode
+		case <-time.After(delayDuration): // TODO: Don't hardcode
 			d.Logger.Println("Starting run")
 			d.doOne()
 		}
