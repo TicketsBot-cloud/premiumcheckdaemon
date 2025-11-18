@@ -9,11 +9,11 @@ import (
 
 	"github.com/TicketsBot-cloud/common/sentry"
 	"github.com/TicketsBot-cloud/database"
+	"github.com/TicketsBot-cloud/gdl/cache"
 	"github.com/TicketsBot-cloud/premiumcheckdaemon/daemon"
 	"github.com/go-redis/redis/v8"
 	"github.com/jackc/pgx/v4"
 	"github.com/jackc/pgx/v4/pgxpool"
-	"github.com/rxdn/gdl/cache"
 )
 
 var dryRun = flag.Bool("dryrun", false, "If set, no changes will be made")

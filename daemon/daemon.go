@@ -11,8 +11,8 @@ import (
 	"github.com/TicketsBot-cloud/common/premium"
 	"github.com/TicketsBot-cloud/common/sentry"
 	"github.com/TicketsBot-cloud/database"
+	"github.com/TicketsBot-cloud/gdl/cache"
 	"github.com/go-redis/redis/v8"
-	"github.com/rxdn/gdl/cache"
 )
 
 type Daemon struct {

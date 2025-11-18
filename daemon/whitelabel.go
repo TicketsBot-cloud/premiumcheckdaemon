@@ -53,7 +53,7 @@ func (d *Daemon) sweepWhitelabel(ctx context.Context) {
 			d.Logger.Printf("whitelabel: deleting bot %d (user %d)\n", bot.BotId, bot.UserId)
 
 			if !d.dryRun {
-				if err := d.db.Whitelabel.Delete(ctx, userId); err != nil {
+				if _, err := d.db.Whitelabel.Delete(ctx, userId); err != nil {
 					sentry.Error(err)
 					d.Logger.Printf("error deleting whitelabel for %d: %s", userId, err.Error())
 					return
