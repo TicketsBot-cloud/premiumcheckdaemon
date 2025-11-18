@@ -4,15 +4,16 @@ import (
 	"context"
 	"flag"
 	"fmt"
-	"github.com/TicketsBot/common/sentry"
-	"github.com/TicketsBot/database"
-	"github.com/TicketsBot/premiumcheckdaemon/daemon"
+	"os"
+	"strconv"
+
+	"github.com/TicketsBot-cloud/common/sentry"
+	"github.com/TicketsBot-cloud/database"
+	"github.com/TicketsBot-cloud/premiumcheckdaemon/daemon"
 	"github.com/go-redis/redis/v8"
 	"github.com/jackc/pgx/v4"
 	"github.com/jackc/pgx/v4/pgxpool"
 	"github.com/rxdn/gdl/cache"
-	"os"
-	"strconv"
 )
 
 var dryRun = flag.Bool("dryrun", false, "If set, no changes will be made")

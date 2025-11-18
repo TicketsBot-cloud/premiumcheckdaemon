@@ -2,16 +2,17 @@ package daemon
 
 import (
 	"context"
-	"github.com/TicketsBot/common/premium"
-	"github.com/TicketsBot/common/sentry"
-	"github.com/TicketsBot/database"
-	"github.com/go-redis/redis/v8"
-	"github.com/rxdn/gdl/cache"
 	"log"
 	"os"
 	"strconv"
 	"strings"
 	"time"
+
+	"github.com/TicketsBot-cloud/common/premium"
+	"github.com/TicketsBot-cloud/common/sentry"
+	"github.com/TicketsBot-cloud/database"
+	"github.com/go-redis/redis/v8"
+	"github.com/rxdn/gdl/cache"
 )
 
 type Daemon struct {

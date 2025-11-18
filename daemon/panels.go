@@ -3,8 +3,9 @@ package daemon
 import (
 	"context"
 	"errors"
-	"github.com/TicketsBot/common/premium"
-	"github.com/TicketsBot/common/sentry"
+
+	"github.com/TicketsBot-cloud/common/premium"
+	"github.com/TicketsBot-cloud/common/sentry"
 	"github.com/rxdn/gdl/cache"
 )
 
