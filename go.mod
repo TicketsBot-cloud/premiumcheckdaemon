@@ -2,6 +2,12 @@ module github.com/TicketsBot-cloud/premiumcheckdaemon
 
 go 1.24.0
 
+//replace github.com/TicketsBot-cloud/common => ../common
+
+replace github.com/TicketsBot-cloud/database => ../database
+
+//replace github.com/TicketsBot-cloud/gdl => ../gdl
+
 require (
 	github.com/TicketsBot-cloud/common v0.0.0-20251026182733-99fa0dc31d90
 	github.com/TicketsBot-cloud/database v0.0.0-20251115092952-706aaa38b688
