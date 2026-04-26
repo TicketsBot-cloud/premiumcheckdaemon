@@ -74,7 +74,7 @@ func (d *Daemon) sweepPanels(ctx context.Context) {
 			}
 
 			if !d.dryRun {
-				if err := d.db.Panel.DisableSome(ctx, guildId, freePanelLimit); err != nil {
+				if err := d.db.Panel.ForceDisableSome(ctx, guildId, freePanelLimit); err != nil {
 					d.Logger.Printf("error disabling panels for guild %d: %s", guild.Id, err.Error())
 					sentry.Error(err)
 					continue

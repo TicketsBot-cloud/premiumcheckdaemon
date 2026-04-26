@@ -2,9 +2,15 @@ module github.com/TicketsBot-cloud/premiumcheckdaemon
 
 go 1.24.0
 
+//replace github.com/TicketsBot-cloud/common => ../common
+
+//replace github.com/TicketsBot-cloud/database => ../database
+
+//replace github.com/TicketsBot-cloud/gdl => ../gdl
+
 require (
 	github.com/TicketsBot-cloud/common v0.0.0-20251026182733-99fa0dc31d90
-	github.com/TicketsBot-cloud/database v0.0.0-20251115092952-706aaa38b688
+	github.com/TicketsBot-cloud/database v0.0.0-20260426100030-8e5afd0b1b76
 	github.com/TicketsBot-cloud/gdl v0.0.0-20251114175831-d4fde7035386
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/jackc/pgx/v4 v4.18.3
@@ -40,6 +46,8 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/rogpeppe/go-internal v1.8.0 // indirect
 	github.com/sirupsen/logrus v1.9.0 // indirect
+	go.uber.org/multierr v1.10.0 // indirect
+	go.uber.org/zap v1.27.1 // indirect
 	golang.org/x/crypto v0.44.0 // indirect
 	golang.org/x/exp v0.0.0-20241108190413-2d47ceb2692f // indirect
 	golang.org/x/sync v0.18.0 // indirect
