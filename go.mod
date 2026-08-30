@@ -9,13 +9,12 @@ go 1.25.0
 //replace github.com/TicketsBot-cloud/gdl => ../gdl
 
 require (
-	github.com/TicketsBot-cloud/common v0.0.0-20260620182815-55fda9a14c01
-	github.com/TicketsBot-cloud/database v0.0.0-20260621202541-dd80c4370280
-	github.com/TicketsBot-cloud/gdl v0.0.0-20260306134952-cccb0116fef6
+	github.com/TicketsBot-cloud/common v0.0.0-20260827064609-69131fc7bd3e
+	github.com/TicketsBot-cloud/database v0.0.0-20260827185255-75ab724b0bca
+	github.com/TicketsBot-cloud/gdl v0.0.0-20260612070331-a3947b410d3e
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/jackc/pgx/v4 v4.18.3
 	github.com/joho/godotenv v1.5.1
-	github.com/rxdn/gdl v0.0.0-20240612163900-621eccf40179
 )
 
 require (
