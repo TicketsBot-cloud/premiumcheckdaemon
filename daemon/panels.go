@@ -6,7 +6,7 @@ import (
 
 	"github.com/TicketsBot-cloud/common/premium"
 	"github.com/TicketsBot-cloud/common/sentry"
-	"github.com/rxdn/gdl/cache"
+	"github.com/TicketsBot-cloud/gdl/cache"
 )
 
 const freePanelLimit = 3
@@ -40,17 +40,18 @@ func (d *Daemon) sweepPanels(ctx context.Context) {
 		// get guild owner
 		guild, err := d.cache.GetGuild(ctx, guildId)
 		if err != nil {
-			if errors.Is(err, cache.ErrNotFound) {
-				continue // if bot's been kicked doesn't matter, when we rejoin we'll purge
-			} else {
+			// if bot's been kicked doesn't matter, when we rejoin we'll purge
+			if !errors.Is(err, cache.ErrNotFound) {
 				sentry.Error(err)
 			}
+
+			continue
 		}
 
 		// TODO: Ignore voting?
 		tier, _, err := d.premiumClient.GetTierByGuild(ctx, guild)
 		if err != nil {
-			d.Logger.Printf("error getting premium status for guild %d: %s", guild.Id, err.Error())
+			d.Logger.Printf("error getting premium status for guild %d: %s", guildId, err.Error())
 			sentry.Error(err)
 			continue
 		}
@@ -63,7 +64,7 @@ func (d *Daemon) sweepPanels(ctx context.Context) {
 			// Instead, select X-3 panels first
 			panels, err := d.db.Panel.GetByGuild(ctx, guildId)
 			if err != nil {
-				d.Logger.Printf("error getting panels for guild %d: %s", guild.Id, err.Error())
+				d.Logger.Printf("error getting panels for guild %d: %s", guildId, err.Error())
 				sentry.Error(err)
 				continue
 			}
@@ -75,7 +76,7 @@ func (d *Daemon) sweepPanels(ctx context.Context) {
 
 			if !d.dryRun {
 				if err := d.db.Panel.ForceDisableSome(ctx, guildId, freePanelLimit); err != nil {
-					d.Logger.Printf("error disabling panels for guild %d: %s", guild.Id, err.Error())
+					d.Logger.Printf("error disabling panels for guild %d: %s", guildId, err.Error())
 					sentry.Error(err)
 					continue
 				}
