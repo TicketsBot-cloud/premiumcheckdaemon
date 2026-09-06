@@ -74,4 +74,5 @@ func (d *Daemon) doOne() {
 
 	d.sweepPanels(ctx)
 	d.sweepWhitelabel(ctx)
+	d.sweepComponentsV2(ctx)
 }
