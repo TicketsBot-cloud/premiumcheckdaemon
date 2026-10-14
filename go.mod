@@ -4,12 +4,12 @@ go 1.25.0
 
 //replace github.com/TicketsBot-cloud/common => ../common
 
-//replace github.com/TicketsBot-cloud/database => ../database
+replace github.com/TicketsBot-cloud/database => ../database
 
 //replace github.com/TicketsBot-cloud/gdl => ../gdl
 
 require (
-	github.com/TicketsBot-cloud/common v0.0.0-20260827064609-69131fc7bd3e
+	github.com/TicketsBot-cloud/common v0.0.0-20260905165836-38e4090764a4
 	github.com/TicketsBot-cloud/database v0.0.0-20260827185255-75ab724b0bca
 	github.com/TicketsBot-cloud/gdl v0.0.0-20260612070331-a3947b410d3e
 	github.com/go-redis/redis/v8 v8.11.5
