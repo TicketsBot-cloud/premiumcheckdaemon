@@ -1,17 +1,17 @@
 module github.com/TicketsBot-cloud/premiumcheckdaemon
 
-go 1.25.0
+go 1.26.0
 
-//replace github.com/TicketsBot-cloud/common => ../common
+// replace github.com/TicketsBot-cloud/common => ../common
 
-replace github.com/TicketsBot-cloud/database => ../database
+// replace github.com/TicketsBot-cloud/database => ../database
 
-//replace github.com/TicketsBot-cloud/gdl => ../gdl
+// replace github.com/TicketsBot-cloud/gdl => ../gdl
 
 require (
-	github.com/TicketsBot-cloud/common v0.0.0-20260905165836-38e4090764a4
-	github.com/TicketsBot-cloud/database v0.0.0-20260827185255-75ab724b0bca
-	github.com/TicketsBot-cloud/gdl v0.0.0-20260612070331-a3947b410d3e
+	github.com/TicketsBot-cloud/common v0.0.0-20261022190115-887ce60dce1b
+	github.com/TicketsBot-cloud/database v0.0.0-20261022191045-27b0736fc5a3
+	github.com/TicketsBot-cloud/gdl v0.0.0-20261022191043-9caa827c743a
 	github.com/go-redis/redis/v8 v8.11.5
 	github.com/jackc/pgx/v4 v4.18.3
 	github.com/joho/godotenv v1.5.1
@@ -46,10 +46,10 @@ require (
 	github.com/sirupsen/logrus v1.9.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.28.0 // indirect
-	golang.org/x/crypto v0.53.0 // indirect
+	golang.org/x/crypto v0.58.0 // indirect
 	golang.org/x/exp v0.0.0-20241108190413-2d47ceb2692f // indirect
-	golang.org/x/sync v0.21.0 // indirect
-	golang.org/x/sys v0.46.0 // indirect
-	golang.org/x/text v0.38.0 // indirect
+	golang.org/x/sync v0.24.0 // indirect
+	golang.org/x/sys v0.49.0 // indirect
+	golang.org/x/text v0.43.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 )
